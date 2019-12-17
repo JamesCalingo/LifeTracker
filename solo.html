@@ -6,21 +6,29 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Life Tracker</title>
+<link rel="stylesheet" href="style.css">
+<title></title>
 </head>
-<body class="text-center">
-<p>Welcome to a life tracking app!</p> 
-
-<p>First of all, are you using this just for yourself or for everyone in the game?</p>
-<div class="main">
-<button id="solo" class="btn btn-lg redirect btn-primary mr-2" onclick="window.location.href = 'solo.html'">Just me</button>
-<button id="group" class="btn btn-lg redirect btn-secondary ml-2">Multiplayer</button>
+<body>
+<div class="jumbotron">My HP Tracker</div>
+<div class="lifeCounter">
+  <p>Welcome! Let's get you set up before we start.</p>
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="name">What's your (character's) name?</label>
+      <input type="input" class="form-control" id="name" aria-describedby="nameInput">
+    </div>
+    <div class="form-group">
+      <label for="startingHP">What's your starting HP?</label>
+      <input type="number" class="form-control" id="startingHP">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 </div>
-<a href="https://jamescalingo.com/ScoreKeeper" id="scoreKeeper-link" class="btn btn-lg btn-dark mt-5">Score Keeper</a>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<script src="assets/js/javascript.js"></script>
 </body>
 </html>
