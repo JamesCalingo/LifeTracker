@@ -41,7 +41,7 @@ $("#soloSubmit").on("click", function(e){
 
 $(document).on("click", ".btn-lg", function(e){
   e.preventDefault();
-  let change = parseInt($(this).attr("data-attribute"));
+  let change = parseFloat($(this).attr("data-attribute"));
   HP += change;
 $("#health").html(HP);
 })
