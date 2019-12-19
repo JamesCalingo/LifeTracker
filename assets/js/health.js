@@ -11,7 +11,7 @@ $("#multi").on("click", function(e){
 </form>`);
 });
 
-var startHP;
+var startHP = 20;
 $(document).on("click", "#HPsubmit", function(e){
   e.preventDefault();
   startHP = $("#HP").val()
@@ -45,7 +45,6 @@ function update(){
   $("#hp1Up").on("click", function (event){
     event.preventDefault();
     p1++;
-    alert("HI")
     update();
   });
   
