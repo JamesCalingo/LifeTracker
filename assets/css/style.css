@@ -1,5 +1,11 @@
 body{
-  background: lightsalmon
+  background: lightsalmon;
+  
+font-family: 'Lato', sans-serif
+}
+
+.jumbotron{
+  font-family: 'Girassol', cursive;
 }
 
 .btn-lg{
@@ -8,4 +14,12 @@ body{
 
 #scoreKeeper-link{
   font-size: 24pt
+}
+
+.display-1{
+  font-family: 'Lato', sans-serif
+}
+
+.name{
+  font-size: 18pt
 }
