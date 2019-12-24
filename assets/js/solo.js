@@ -4,8 +4,14 @@ $("#soloSubmit").on("click", function(e){
   e.preventDefault;
   let name = $("#name").val().trim();
   HP = $("#startingHP").val();
+
+if(!name || !HP){
+  alert("You need to fill in BOTH forms please!");
+  return false
+}
+else{
   $("#lifeCounter").html(`<div class="text-center">
-  <h1>${name}</h1>
+  <span id="displayName" class="display-4">${name}</span>
   <div id="health" class="display-1">${HP}</div>
   <div class="container w-50">
     <div class="row justify-content-center">
@@ -35,8 +41,10 @@ $("#soloSubmit").on("click", function(e){
         <button class="btn btn-lg btn-danger" data-attribute="-100">-100</button>
       </div>
     </div>
+    <button id="nameChange" class="btn btn-info mt-3">Change Name</button>
   </div>
 </div>`)
+}
 })
 
 $(document).on("click", ".btn-lg", function(e){
@@ -45,3 +53,22 @@ $(document).on("click", ".btn-lg", function(e){
   HP += change;
 $("#health").html(HP);
 })
+
+$(document).on("click", "#nameChange", function(e){
+  e.preventDefault();
+  $("#displayName").html(`<input class="form-control form-control-sm" id="newName" type="text" placeholder=""><button id="confirm" class="btn btn-dark">Confirm</button>`);
+  $("#nameChange").addClass("disabled");
+});
+
+$(document).on("click", "#confirm", function(e){
+  e.preventDefault();
+  let newName = $("#newName").val().trim();
+  if (!newName){
+    alert("What's your name?");
+    return false;
+  }
+  else{
+  $("#displayName").html(newName);
+  $("#nameChange").removeClass("disabled");
+  };
+});
