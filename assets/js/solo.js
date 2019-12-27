@@ -16,29 +16,29 @@ else{
   <div class="container w-50">
     <div class="row justify-content-center">
       <div class="col-md-2">
-        <button class="btn btn-lg btn-success" data-attribute="+1">+1</button>
+        <button class="btn btn-lg btn-success" data-attribute="-1">+1</button>
         <br>
-        <button class="btn btn-lg btn-danger" data-attribute="-1">-1</button>
+        <button class="btn btn-lg btn-danger" data-attribute="1">-1</button>
       </div>
       <div class="col-md-2">
-        <button class="btn btn-lg btn-success" data-attribute="+5">+5</button>
+        <button class="btn btn-lg btn-success" data-attribute="-5">+5</button>
         <br>
-        <button class="btn btn-lg btn-danger" data-attribute="-5">-5</button>
+        <button class="btn btn-lg btn-danger" data-attribute="5">-5</button>
       </div>
       <div class="col-md-2">
-        <button class="btn btn-lg btn-success" data-attribute="+10">+10</button>
+        <button class="btn btn-lg btn-success" data-attribute="-10">+10</button>
         <br>
-        <button class="btn btn-lg btn-danger" data-attribute="-10">-10</button>
+        <button class="btn btn-lg btn-danger" data-attribute="10">-10</button>
       </div>
       <div class="col-md-2">
-        <button class="btn btn-lg btn-success" data-attribute="+50">+50</button>
+        <button class="btn btn-lg btn-success" data-attribute="-50">+50</button>
         <br>
-        <button class="btn btn-lg btn-danger" data-attribute="-50">-50</button>
+        <button class="btn btn-lg btn-danger" data-attribute="50">-50</button>
       </div>
       <div class="col-md-2">
-        <button class="btn btn-lg btn-success" data-attribute="+100">+100</button>
+        <button class="btn btn-lg btn-success" data-attribute="-100">+100</button>
         <br>
-        <button class="btn btn-lg btn-danger" data-attribute="-100">-100</button>
+        <button class="btn btn-lg btn-danger" data-attribute="100">-100</button>
       </div>
     </div>
     <button id="nameChange" class="btn btn-info mt-3">Change Name</button>
@@ -50,9 +50,10 @@ else{
 $(document).on("click", ".btn-lg", function(e){
   e.preventDefault();
   let change = parseFloat($(this).attr("data-attribute"));
-  HP += change;
+  HP -= change;
 $("#health").html(HP);
 })
+// NOTE: for some reason using += concatenated a string, so I'm using -= and reversing the data-attribute values
 
 $(document).on("click", "#nameChange", function(e){
   e.preventDefault();
