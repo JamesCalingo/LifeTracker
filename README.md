@@ -9,3 +9,9 @@ The single player version will prompt for a name and starting Hit Points (HP) va
 
 The multiplayer version will display everyone's HP and buttons to add or subtract points. For the time being, each player is set to 50 HP for multiplayer games, but I am working on a method to have this number be customizable depending on the game. Player names, however, are customizable just like in the ScoreKeeper app.
 
+# Technology Used
+
+- Html
+- CSS
+- JavaScript
+- JQuery
